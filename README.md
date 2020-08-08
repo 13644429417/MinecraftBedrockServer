@@ -6,7 +6,7 @@
 sudo apt-get update&&sudo apt-get install git -y&&git clone https://gitee.com/xingguangk/MinecraftBedrockServer.git&&sudo chmod -R 777 MinecraftBedrockServer&&cd MinecraftBedrockServer&&sudo chmod +x SetupMinecraft.sh&&./SetupMinecraft.sh<br>
 <br>
 
-################################################################################################################################################################################################
+######################################################################################################################################################################################################
 
 在Ubuntu/Debian/Raspbian/Armbian上设置Minecraft基岩专用服务器，提供自动更新、备份和启动时自动运行的选项<br>
 查看安装说明：https://jamesachambers.com/minecraft-bedrock-edition-ubuntu-dedicated-server-guide/<br>
