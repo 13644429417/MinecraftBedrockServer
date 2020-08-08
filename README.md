@@ -23,10 +23,10 @@ chmod +x SetupMinecraft.sh<br>
 <br>
 <b>更新历史记录</b><br>
 <br>
-July 24th 2019<br>
--Fixed Raspberry Pi support
-July 24th 2019<br>
--Fixed Raspberry Pi support
+2019年7月24日<br>
+-固定树莓派支持
+2019年7月24日<br>
+-固定树莓派支持
 2019年7月24日<br>
 -固定树莓派支持<br>
 <br>
@@ -75,4 +75,4 @@ July 24th 2019<br>
 2019年2月8日<br>
 -初始版本<br>
 
-作者不是我，原作者仓库：https://github.com/TheRemote/MinecraftBedrockServer<br>
+原仓库：https://github.com/TheRemote/MinecraftBedrockServer<br>
