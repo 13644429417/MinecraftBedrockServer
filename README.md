@@ -1,15 +1,15 @@
 # Minecraft Bedrock Server
 以下部署国内可能不行，请先克隆本仓库，然后在目录内运行./SetupMinecraft.sh<br>
 因为目前我的世界基岩版服务器官方下载链接是国外的，所以还是比较慢<br>
-Sets up a Minecraft Bedrock dedicated server on Ubuntu / Debian / Raspbian / Armbian with options for automatic updates, backups and running automatically at startup<br>
-View installation instructions at: https://jamesachambers.com/minecraft-bedrock-edition-ubuntu-dedicated-server-guide/<br>
+在Ubuntu/Debian/Raspbian/Armbian上设置Minecraft基岩专用服务器，提供自动更新、备份和启动时自动运行的选项<br>
+查看安装说明：https://jamesachambers.com/minecraft-bedrock-edition-ubuntu-dedicated-server-guide/<br>
 <br>
-To run the installation type:<br>
+要运行安装类型：<br>
 wget https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/SetupMinecraft.sh<br>
 chmod +x SetupMinecraft.sh<br>
 ./SetupMinecraft.sh<br>
 <br>
-<b>Tested Distributions</b><br>
+<b>测试分布</b><br>
 -Ubuntu / Ubuntu Server 18.04.2<br>
 -Debian Stretch / Buster<br>
 <br>
@@ -21,52 +21,58 @@ chmod +x SetupMinecraft.sh<br>
 --Raspberry Pi<br>
 --Tinkerboard<br>
 <br>
-<b>Update History</b><br>
+<b>更新历史记录</b><br>
 <br>
 July 24th 2019<br>
--Fixed Raspberry Pi support<br>
+-Fixed Raspberry Pi support
+July 24th 2019<br>
+-Fixed Raspberry Pi support
+2019年7月24日<br>
+-固定树莓派支持<br>
 <br>
-July 10th 2019<br>
--Fixed OpenSSL error in 1.12 (thanks obviator!)<br>
--Fixed ports not choosing defaultS if nothing is entered (thanks sweavo!)<br>
+2019年7月10日<br>
+-修正了1.12中的OpenSSL错误（感谢obviator！）<br>
+-固定端口不选择默认值，如果没有输入（谢谢sweavo！）<br>
 <br>
-July 2nd 2019<br>
--Added libcurl4 Bedrock server dependency to installer script to prevent server startup from failing<br>
+2019年7月2日<br>
+-在安装程序脚本中添加了libcurl4基岩服务器依赖项，以防止服务器启动失败<br>
 <br>
-July 1st 2019<br>
--Added support for multiple servers<br>
--Choose the folder name and port for the server in SetupMinecraft.sh (must be unique per server instance)<br>
+2019年7月1日<br>
+-增加了对多个服务器的支持<br>
+-在中选择服务器的文件夹名称和端口SetupMinecraft.sh（每个服务器实例必须唯一）<br>
 <br>
-May 23rd 2019<br>
--Fixed typo in restart.sh where there was a space after stop command preventing the server from closing cleanly<br>
--Added 10 second sleep after a force close to give the server time to fully close before calling start.sh<br>
--Fixed server not restarting after scheduled nightly reboot (related to restart.sh bug)<br>
--Removed some direct (for example paths like /bin/sleep) that were harming cross platform compatibility<br>
+2019年5月23日<br>
+-修正了输入错误重新启动.sh其中有一个空格后停止命令阻止服务器干净地关闭<br>
+-在强制关闭后增加了10秒的睡眠时间，以便在调用之前让服务器有时间完全关闭开始.sh<br>
+-修复了服务器在计划的夜间重新启动后未重新启动（与重新启动.sh错误）<br>
+-删除了一些损害跨平台兼容性的直接（例如/bin/sleep）路径<br>
 <br>
-April 26th 2019<br>
--Tested new Bedrock dedicated server 1.11.1.2<br>
--Added startup counter to server instead of waiting a flat 4s to reduce unnecessary waiting<br>
--Fixed ARM support (64 bit required)<br>
+2019年4月26日<br>
+-测试了新的基岩专用服务器1.11.1.2<br>
+-在服务器上增加了启动计数器，而不是等待一个平坦的4s，以减少不必要的等待<br>
+-固定臂支架（需要64位）<br>
 <br>
-April 18th 2019<br>
--Changed StopChecks++ to StopChecks=$((StopChecks+1)) to improve portability (thanks Jason B.)<br>
--Added TimeoutStartSec=600 to server to prevent it being killed if taking longer than usual to download server<br>
+2019年4月18日<br>
+-将StopChecks++更改为StopChecks=$（（StopChecks+1））以提高可移植性（谢谢Jason B.）<br>
+-在服务器上添加了timeoutpartsec=600，以防下载服务器的时间比平时长<br>
 <br>
-March 7th 2019<br>
--Added Armbian support<br>
--Tested with Tinkerboard<br>
--Fixed portability issue with route vs /sbin/route<br>
+2019年3月7日<br>
+-增加了Armbian支持<br>
+-使用Tinkboard进行测试<br>
+-修复了route vs/sbin/route的可移植性问题<br>
 <br>
-March 2nd 2019<br>
--Running the SetupMinecraft.sh script after already installing now updates all scripts and reconfigures the minecraftbe service<br>
--Script now works on any Debian based distribution (Ubuntu, Debian, Raspbian, etc.)<br>
--Added *very slow* support for ARM platforms such as Raspberry Pi with QEMU emulation of x86_64<br>
--Renamed service to minecraftbe to avoid confusion with Java version<br>
+2019年3月2日<br>
+-运行SetupMinecraft.sh脚本安装后，现在更新所有脚本并重新配置minecraftbe服务<br>
+-脚本现在可用于任何基于Debian的发行版（Ubuntu、Debian、Raspbian等）<br>
+-增加了对ARM平台（如Raspberry Pi）的*非常慢*的支持，QEMU仿真x86帴64<br>
+-将服务重命名为minecraftbe，以避免与Java版本混淆<br>
 <br>
-February 15th 2019<br>
--Backups now compress into .tar.gz format (saved in backups folder)<br>
--Startup service waits up to 20 seconds for an internet connection to allow time for DHCP to retrieve an IP address<br>
--Removed unnecessary sleep time on stop.sh script so it returns as soon as the minecraft server closes<br>
+2019年2月15日<br>
+-备份现在压缩到。焦油gz格式（保存在备份文件夹中）<br>
+-启动服务等待internet连接最多20秒，以便DHCP有时间检索IP地址<br>
+-删除了不必要的睡眠时间停止.sh编写脚本，以便在minecraft服务器关闭时立即返回<br>
 <br>
-February 8th 2019<br>
--Initial release<br>
+2019年2月8日<br>
+-初始版本<br>
+
+作者不是我，原作者仓库：https://github.com/TheRemote/MinecraftBedrockServer<br>
