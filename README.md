@@ -1,4 +1,5 @@
 # Minecraft Bedrock Server
+以下部署国内可能不行，请先克隆本仓库，然后在目录内运行./SetupMinecraft.sh
 Sets up a Minecraft Bedrock dedicated server on Ubuntu / Debian / Raspbian / Armbian with options for automatic updates, backups and running automatically at startup<br>
 View installation instructions at: https://jamesachambers.com/minecraft-bedrock-edition-ubuntu-dedicated-server-guide/<br>
 <br>
