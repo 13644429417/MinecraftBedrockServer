@@ -213,7 +213,7 @@ echo "Checking for the latest version of Minecraft Bedrock server..."
 cp ~/MinecraftBedrockServer/version.html downloads/version.html
 #DownloadURL=$(grep -o 'https://minecraft.azureedge.net/bin-linux/[^"]*' downloads/version.html)
 #DownloadFile=$(echo "$DownloadURL" | sed 's#.*/##')
-cp ~/MinecraftBedrockServer/bedrock-server-1.16.1.02.zip downloads/bedrock-server-1.16.1.02.zip
+#cp ~/MinecraftBedrockServer/bedrock-server-1.16.1.02.zip downloads/bedrock-server-1.16.1.02.zip
 #echo "$DownloadURL"
 #echo "$DownloadFile"
 
@@ -222,7 +222,8 @@ echo "Downloading the latest version of Minecraft Bedrock server..."
 UserName=$(whoami)
 DirName=$(readlink -e ~)
 #wget -O "downloads/$DownloadFile" "$DownloadURL"
-unzip -o "downloads/bedrock-server-1.16.1.02.zip"
+#unzip -o "downloads/$DownloadFile"
+cp ~/MinecraftBedrockServer/bedrock-server-1.16.1.02/* ~/minecraftbe/*
 
 # Download start.sh from repository
 echo "Grabbing start.sh from repository..."
