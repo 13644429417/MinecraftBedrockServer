@@ -91,32 +91,32 @@ if [ -d "$ServerName" ]; then
   echo "Server directory is: $DirName/minecraftbe/$ServerName"
 
   # Remove existing scripts
-  rm start.sh stop.sh restart.sh
+  sudo rm start.sh stop.sh restart.sh
 
   # Download start.sh from repository
   echo "Grabbing start.sh from repository..."
-  wget -O start.sh https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/start.sh
+  cp ~/MinecraftBedrockServer/start.sh start.sh
   chmod +x start.sh
   sed -i "s:dirname:$DirName:g" start.sh
   sed -i "s:servername:$ServerName:g" start.sh
 
   # Download stop.sh from repository
   echo "Grabbing stop.sh from repository..."
-  wget -O stop.sh https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/stop.sh
+  cp ~/MinecraftBedrockServer/stop.sh stop.sh
   chmod +x stop.sh
   sed -i "s:dirname:$DirName:g" stop.sh
   sed -i "s:servername:$ServerName:g" stop.sh
 
   # Download restart.sh from repository
   echo "Grabbing restart.sh from repository..."
-  wget -O restart.sh https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/restart.sh
+  cp ~/MinecraftBedrockServer/restart.sh restart.sh
   chmod +x restart.sh
   sed -i "s:dirname:$DirName:g" restart.sh
   sed -i "s:servername:$ServerName:g" restart.sh
 
   # Update minecraft server service
   echo "Configuring $ServerName service..."
-  sudo wget -O /etc/systemd/system/$ServerName.service https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/minecraftbe.service
+  sudo cp ~/MinecraftBedrockServer/minecraftbe.service /etc/systemd/system/$ServerName.service
   sudo chmod +x /etc/systemd/system/$ServerName.service
   sudo sed -i "s/replace/$UserName/g" /etc/systemd/system/$ServerName.service
   sudo sed -i "s:dirname:$DirName:g" /etc/systemd/system/$ServerName.service
