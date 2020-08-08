@@ -243,7 +243,8 @@ sed -i "s:servername:$ServerName:g" stop.sh
 
 # Download restart.sh from repository
 echo "Grabbing restart.sh from repository..."
-wget -O restart.sh https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/restart.sh
+#wget -O restart.sh https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/restart.sh
+cp ~/MinecraftBedrockServer/restart.sh restart.sh
 chmod +x restart.sh
 sed -i "s:dirname:$DirName:g" restart.sh
 sed -i "s:servername:$ServerName:g" restart.sh
