@@ -1,19 +1,21 @@
 # Minecraft Bedrock Server
-以下部署国内可能不行，请先克隆本仓库，然后在目录内运行./SetupMinecraft.sh<br>
+本仓库必须克隆，在目录内运行./SetupMinecraft.sh<br>
 因为目前我的世界基岩版服务器官方下载链接是国外的，所以还是比较慢<br>
+本仓库部署命令：
+<b>部署命令</b><br>
+sudo apt-get update&&sudo apt-get install git -y&&git clone https://gitee.com/xingguangk/MinecraftBedrockServer.git&&sudo chmod -R 777 MinecraftBedrockServer&&cd MinecraftBedrockServer&&sudo chmod +x SetupMinecraft.sh&&./SetupMinecraft.sh<br>
+<br>
+
+############################################################################################################################################################################################################################################################
+
 在Ubuntu/Debian/Raspbian/Armbian上设置Minecraft基岩专用服务器，提供自动更新、备份和启动时自动运行的选项<br>
 查看安装说明：https://jamesachambers.com/minecraft-bedrock-edition-ubuntu-dedicated-server-guide/<br>
-<br>
-要运行安装类型：<br>
-wget https://raw.githubusercontent.com/TheRemote/MinecraftBedrockServer/master/SetupMinecraft.sh<br>
-chmod +x SetupMinecraft.sh<br>
-./SetupMinecraft.sh<br>
 <br>
 <b>测试分布</b><br>
 -Ubuntu / Ubuntu Server 18.04.2<br>
 -Debian Stretch / Buster<br>
 <br>
-<b>Tested Platforms</b><br>
+<b>测试平台</b><br>
 -PC X86_64<br>
 -Udoo X86<br>
 -Intel Compute Stick<br>
